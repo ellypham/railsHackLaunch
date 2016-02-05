@@ -1,0 +1,321 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+/* GLOBAL STYLES 
+-----------------*/
+/* apply a natural box layout model to all elements */
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul.dropdown li a {
+	font-family: Arial;
+	font-size: 25px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: rgb(0, 186, 188);
+	font-family: Arial;
+	line-height: 1.35;
+}
+h1,
+h2,
+h3 {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	line-height: 1;
+	font-weight: normal;
+	text-align: center;
+	margin: 0;
+}
+h2 {
+	font-size: 48px;
+}
+section {
+	padding: 65px 0;
+}
+.content-wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 40px;
+}
+
+/* HEADER 
+----------*/
+header {
+	padding: 110px 0;
+	height: 625px;
+	background: url('assets/images/Remar Volunteer no logo header.jpg') top center no-repeat fixed;
+	background-size: 100%;
+	color: rgb(238,79,156);
+	text-align: center;
+}
+
+header h1 {
+	color: rgb(238,79,156);
+	padding-top:1px;
+	margin:120px;
+	width:950px;
+	background: rgba(225,225,225,0.8);
+	text-align: center;
+}
+
+header h2 {
+	color: rgb(238,79,156);
+	background: rgba(225,225,225,0.9);
+	margin: 0 auto;
+	width: 500px;
+}
+
+header h1,
+header h2 {
+	text-shadow: 1px 1px 2px #aaa;
+}
+header h1 {
+	font-size: 60px;
+	padding: 30px 0;
+}
+header h2 {
+	text-transform: none;
+	font-size: 36px;
+	color: rgb(0,186,188);
+	padding: 15px;
+}
+
+.about{
+	background: rgba(225,225,225,0.7);
+}
+
+/* NAVIGATION 
+--------------*/
+nav {
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	-webkit-box-shadow: 0px 0px 10px 0px #777;
+	box-shadow: 0px 0px 10px 0px #777;
+}
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+nav ul li {
+	display: inline-block;
+}
+nav ul a {
+	padding: 10px 35px;
+	display: block;
+	text-decoration: none;
+	color: rgb(0,186,188);
+	text-transform: uppercase;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+nav ul a:hover {
+	color: rgb(238,79,156);
+	background: #eee;
+}
+/* List icon - will only show at 767px resolution or less. */
+nav .fa-bars {
+	display: none;
+}
+
+/* ABOUT SECTION 
+-----------------*/
+.about .description {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.about .description p {
+	width: 100%;
+	padding: 0 2%;
+	font-size: 18px;
+}
+.about blockquote {
+	text-align: center;
+	font-size: 24px;
+}
+
+.about blockquote a{
+	color: rgb(238,79,156);
+}
+
+/* PROJECTS SECTION 
+--------------------*/
+.projects {
+	background: rgba(238,79,156,0.5);
+}
+.projects img {
+	width: 100%;
+	border: 5px solid #ffffff;
+	padding: 5px;
+}
+.projects .column {
+	width: 24%;
+	float: left;
+	text-align: center;
+	margin: 20px 0.5% 0 0.5%;
+	color: #696969;
+
+}
+.projects p {
+	padding: 0 20px;
+	line-height: 1.25;
+}
+
+.column h3{
+	color:rgb(0,186,188);
+}
+
+
+/* CONTACT SECTION
+--------------------*/
+.contact {
+	background: #ecf0f1;
+}
+.contact h2 {
+	margin-top: 0;
+}
+.contact img {
+	width: 48px;
+}
+.contact .social {
+	text-align: center;
+	margin-top: 25px;
+}
+.contact .social a {
+	margin: 0 10px;
+}
+
+/* MEDIA QUERIES 
+-----------------*/
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	header {
+		height: auto;
+	}
+	header h1 {
+		font-size: 50px;
+		padding-bottom: 10px;
+	}
+	header h2 {
+		font-size: 32px;
+	}
+	h2 {
+		font-size: 28px;
+	}
+	.about blockquote {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.projects .column {
+		width: 48%;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	header h1 {
+		font-size: 40px;
+		padding: 6px 0 0 0;
+	}
+	header h2 {
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	nav {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		background: #2c3e50;
+	}
+	nav .fa-bars {
+		display: block;
+		padding: 10px 15px;
+		color: white;
+		cursor: pointer;
+	}
+	nav ul.dropdown {
+		display: none;
+		text-align: left;
+		overflow: hidden;
+	}
+	nav ul.dropdown li {
+		display: block;
+		border-top: 1px solid white;
+	}
+	nav ul.dropdown a {
+		color: white;
+		padding-left: 15px;
+	}
+	nav ul.dropdown.open {
+		display: block;
+	}
+	.about .content-wrapper p {
+		width: 100%;
+	}
+	.about .content-wrapper .description p {
+		font-size: 16px;
+		padding: 0;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	header,
+	nav,
+	section {
+		min-width: 320px;
+	}
+	header {
+		padding: 80px 40px 0 40px;
+		min-height: 220px;
+	}
+	header h1 {
+		font-size: 30px;
+	}
+	.content-wrapper {
+		padding: 0 25px;
+	}
+	.about blockquote {
+		text-align: left;
+		font-size: 20px;
+		line-height: 1.25;
+	}
+	.projects .column {
+		width: 100%;
+	}
+	.projects h3 {
+		font-size: 16px;
+	}
+	.projects p {
+		margin-top: 10px;
+	}
+}
